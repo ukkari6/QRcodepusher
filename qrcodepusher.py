@@ -42,6 +42,16 @@ cap = cv2.VideoCapture(0)
 qcd = cv2.QRCodeDetector()
 #retval, decoded_info, points, straight_qrcode = qcd.detectAndDecodeMulti(img)
 
+
+# 画像を読み込む
+if me_mode == "send":
+  img = cv2.imread('send_qr.png')
+elif me_mode == "receive":
+  img = cv2.imread('receive_qr.png')
+cv2.imshow('Display Window', img)
+
+
+
 while(cap.isOpened()):
     ret, frame = cap.read()
     if ret == True:
@@ -114,15 +124,6 @@ elif me_mode == "receive":
   while(cap.isOpened()):
     print("receive")
     time.sleep(0.1)
-
-      ret, frame = cap.read()
-      if ret == True:
-          cv2.imshow('Webcam', frame)
-          retval, decoded_info, points, straight_qrcode = qcd.detectAndDecodeMulti(frame)
-
-          key = cv2.waitKey(1) & 0xFF
-
-          if retval:
 
 
 
