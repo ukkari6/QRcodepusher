@@ -1,6 +1,6 @@
 # QRcodepusher
 
-<img src="logo.png" width="320" height="240" alt="logo">
+![logo](logo.jpg)
 
 このプロジェクトは、QRコードを利用してエアギャップ環境でもデータのやり取りが可能かどうかを調査するためのプロジェクトです。
 
